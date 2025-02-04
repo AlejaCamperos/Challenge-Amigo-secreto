@@ -16,4 +16,9 @@ function agregarAmigo() {
         alert("Por favor, ingresa un nombre válido.");
         return;
     }
+
+    // Agregar el nombre al array
+    listaDeAmigos.push(nombre);
+    console.log("Lista actualizada:", listaDeAmigos); // Ver la lista en la consola
+
 }
