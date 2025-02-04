@@ -21,4 +21,7 @@ function agregarAmigo() {
     listaDeAmigos.push(nombre);
     console.log("Lista actualizada:", listaDeAmigos); // Ver la lista en la consola
 
+    // Limpiar el campo de entrada
+    inputNombre.value = "";
+
 }
