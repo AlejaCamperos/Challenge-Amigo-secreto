@@ -25,7 +25,7 @@ function agregarAmigo() {
     inputNombre.value = "";
     // Actualizar la visualización de la lista
     mostrarLista();
-    
+
 }
 
 // Paso 3: Función para mostrar los nombres en la lista
@@ -42,4 +42,23 @@ function mostrarLista() {
     });
 
     console.log("Lista mostrada en pantalla"); // Confirmar en la consola
+}
+
+// Paso 4: Función para sortear un amigo al azar
+function sortearAmigo() {
+    // Validar que haya al menos un nombre en la lista
+    if (listaDeAmigos.length === 0) {
+        alert("Agrega al menos un nombre antes de sortear.");
+        return;
+    }
+
+    // Elegir un nombre al azar
+    let indiceAleatorio = Math.floor(Math.random() * listaDeAmigos.length);
+    let amigoSorteado = listaDeAmigos[indiceAleatorio];
+
+    console.log("Nombre sorteado:", amigoSorteado); // Ver en la consola quién fue elegido
+
+    // Mostrar el resultado en la página
+    let resultadoHTML = document.getElementById("resultado");
+    resultadoHTML.innerHTML = `<li>🎉 El amigo secreto es: <strong>${amigoSorteado}</strong> 🎉</li>`;
 }
