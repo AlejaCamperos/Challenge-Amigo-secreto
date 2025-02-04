@@ -23,5 +23,23 @@ function agregarAmigo() {
 
     // Limpiar el campo de entrada
     inputNombre.value = "";
+    // Actualizar la visualización de la lista
+    mostrarLista();
+    
+}
 
+// Paso 3: Función para mostrar los nombres en la lista
+
+function mostrarLista() {
+    let listaHTML = document.getElementById("listaAmigos");
+    listaHTML.innerHTML = ""; // Limpiar la lista antes de actualizarla
+
+    // Recorrer el array y crear un elemento <li> para cada nombre
+    listaDeAmigos.forEach((amigo) => {
+        let item = document.createElement("li");
+        item.textContent = amigo;
+        listaHTML.appendChild(item);
+    });
+
+    console.log("Lista mostrada en pantalla"); // Confirmar en la consola
 }
